@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>绝对定位-水平居中</title>
+		<style type="text/css">
+			body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{
+			    margin:0;padding:0
+			}
+			div{
+				
+				/* 1.如何让绝对定位的元素水平居中
+				只需要设置绝对定位元素的left:50%;
+				然后再设置绝对定位元素的 margin-left: -元素宽度的一半px; */
+				width: 300px;
+				/* width: 50%; */
+				height: 50px;
+				background-color: red;
+				/* margin: 0 auto; */
+				position: absolute;
+				left: 50%;
+				margin-left: -150px;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>

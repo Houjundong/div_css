@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>定位流（绝对定位， 相对定位， 固定定位， 静态定位）1.相对定位</title>
+		<!--相对定位流不会脱离标准流的，并且在标准流中会继续占一份空间 -->
+		<!-- 相对定位流:相对于自己在标准流中的位置来移动 -->
+		<style type="text/css">
+			body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{
+			    margin:0;padding:0
+			}
+			div{
+				width: 100px;
+				height: 100px;
+			}
+			.box1{
+				background-color: red;
+			}
+			.box2{
+				background-color: green;
+				position: relative;
+				/* 在相对定位中：同一个方向上的定位属性只能使用一个 */
+				/* 由于相对定位流不会脱离标准流的，并且在标准流中会继续占一份空间， 所以在相对定位中是区分块级元素，行内元素， 行内块级元素的 */
+				top: 20px;
+				left: 20px;
+				/* right: 20px; */
+				/* margin-bottom: 20px; */
+				margin-top: 20px;
+				/* 
+				 1.用于对元素进行微调
+				 2.配合后面使用的绝对定位赖使用
+				 */
+			}
+			.box3{
+				background-color: blue;
+				
+			}
+			
+			span{
+				width: 100px;
+				height: 100px;
+				position: relative;
+				background-color: greenyellow;
+			}
+			input{
+				width: 200px;
+				height: 50px;
+				/* float: left; */
+				/* position: relative;
+				top: -20px; */
+			}
+			img{
+				width: 100px;
+				height: 50px;
+				/* float: left; */
+				
+				position: relative;
+				top: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- <div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+		<span>我是span</span> -->
+		<input type="text"/>
+		<img src="images/vcode.jpg"/>
+	</body>
+</html>

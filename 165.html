@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 
+		1.过渡连写格式
+		transition: 过渡属性 过渡时长 运动速度 延迟时间;
+		2.过渡连写注意点
+		2.1和分开写一样, 如果想给多个属性添加过渡效果也是用逗号隔开即可
+		2.2连写的时可以省略后面的两个参数, 因为只要编写了前面的两个参数就已经满足了过渡的三要素
+		2.3如果多个属性运动的速度/延迟的时间/持续时间都一样, 那么可以简写为transition:all 0s;
+		 -->
+		 <style type="text/css">
+			 div{
+			 	width: 100px;
+			 	height: 50px;
+			 	background-color: red;
+			 	/* transition-property: width;
+				transition-duration: 2s; */
+				/* transition: width 2s linear 0s, background-color 2s linear 0s; */
+				/* transition: width 2s , background-color 2s ; */
+				transition: all 2s; 
+			 }
+			 
+			 div:hover{
+			 	width: 400px;
+				background-color: blue;
+			 }
+		 </style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>

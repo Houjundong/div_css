@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>定位流-z-index属性</title>
+		<!-- 默认情况下所有的元素都有一个默认的z-index属性, 取值是0.
+z-index属性的作用是专门用于控制定位流元素的覆盖关系的 -->
+
+<!-- 1.1.默认情况下定位流的元素会盖住标准流的元素 -->
+<!-- 22.默认情况下定位流的元素后面编写的会盖住前面编写的 -->
+<!-- 3.如果定位流的元素设置了z-index属性, 那么谁的z-index属性比较大, 谁就会显示在上面 -->
+
+<!-- 注意点:
+1.从父现象(父元素是定位流)
+1.1如果两个元素的父元素都没有设置z-index属性, 那么谁的z-index属性比较大谁就显示在上面
+1.2如果两个元素的父元素设置了z-index属性, 那么子元素的z-index属性就会失效, 也就是说谁的父元素的z-index属性比较大谁就会显示在上面 -->
+<style type="text/css">
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{
+			margin:0;padding:0
+		}
+		div{
+			width: 100px;
+			height: 100px;
+			
+		}
+		.box1{
+			background-color: red;
+			position: relative;
+		}
+		.box2{
+			background-color: green;
+			position: absolute;
+			left: 50px;
+			top: 50px;
+		}
+		.box3{
+			background-color: blue;
+			position: fixed;
+			left: 100px;
+			top: 100px;
+		}
+		.father1{
+			 width: 200px;
+			 height: 200px;
+			 background-color: red;
+			 position: relative;
+			 z-index: 2;
+		}
+		.father2{
+			 width: 200px;
+			 height: 200px;
+			 background-color: green;
+			 position: relative;
+			 z-index: 0;
+		}
+		.son1{
+			 width: 100px;
+			 height: 100px;
+			 background-color: blue;
+			 position: absolute;
+			 top: 200px;
+			 left: 200px;
+			 z-index: 1;
+		}
+		.son2{
+			 width: 100px;
+			 height: 100px;
+			 background-color: yellow;
+			 position: absolute;
+			 top: 50px;
+			 left: 250px;
+			 z-index: 2;
+		}
+	</style>
+	</head>
+	<body>
+		<!-- <div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div> -->
+		<div class="father1">
+			<div class="son1"></div>
+		</div>
+		<div class="father2">
+			<div class="son2"></div>
+		</div>
+	</body>
+</html>

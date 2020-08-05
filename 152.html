@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>绝对定位注意点</title>
+	</head>
+	<style type="text/css">
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{
+		    margin:0;padding:0
+		}
+		/* .bxo1{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+		.bxo2{
+			width: 2000px;
+			height: 100px;
+			background-color: green;
+		}
+		.bxo3{
+			width: 100px;
+			height: 2000px;
+			background-color: blue;
+		} */
+		.box1{
+			width: 300px;
+			height: 300px;
+			background-color: red;
+			margin-left: 200px;
+			border:10px solid black ;
+			padding: 30px;
+			position: relative;
+		}
+		.box2{
+			width: 100px;
+			height: 100px;
+			background-color: green;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	</style>
+	<body>
+		<!-- <div class="bxo1"></div>
+		<div class="bxo2"></div>
+		<div class="bxo3"></div> -->
+		<div class="box1">
+			<div class="box2"></div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>定位流（绝对定位， 相对定位， 固定定位， 静态定位）1.绝对定位</title>
+		<!--1.绝对定位会脱离标准流的,并且不区分行内元素和块级元素以及行内块级元素， 都是可以设置宽高的 -->
+		<!-- 2.绝对定位：是相对于body进行定位的 -->
+		<!--  -->
+		<style type="text/css">
+			body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{
+			    margin:0;padding:0
+			}
+			div{
+				width: 100px;
+				height: 100px;
+			}
+			.box1{
+				background-color: red;
+			}
+			.box2{
+				background-color: green;
+				position: absolute;
+				/* float: left; */
+				/* top: 0;
+				right: 0; */
+				bottom: 0;
+				left: 0;
+			}
+			.box3{
+				background-color: blue;
+			}
+			span{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				background-color: greenyellow;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+		<!-- <span>我是span</span> -->
+	</body>
+</html>

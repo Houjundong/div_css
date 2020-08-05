@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>2D转换模块-相片墙</title>
+		<style type="text/css">
+			body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{
+			    margin:0;padding:0
+			}
+			ul{
+				height: 400px;
+				background-color: skyblue;
+				padding-left: 600px;
+				padding-top: 80px;
+				border: 1px solid #CCCCCC;
+			}
+			ul li {
+				list-style: none;
+				width: 150px;
+				height: 200px;
+				border: 5px solid #F9F9F9;
+				/* float: left;
+				margin-left: 10px; */
+				transition: transform 1s, z-index 1s;
+				display: inline-block;
+				position: relative;
+			}
+			
+			ul li img{
+				width: 150px;
+				height: 200px;
+			}
+			
+			ul li:nth-child(1) {
+				transform: rotate(30deg);
+			}
+			ul li:nth-child(2) {
+				transform: rotate(-40deg);
+			}
+			ul li:nth-child(3) {
+				transform: rotate(10deg);
+			}
+			ul li:nth-child(4) {
+				transform: rotate(45deg);
+			}
+			
+			ul li:hover{
+				transform: rotate(0deg) scale(1.5);
+				z-index: 998;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+		    <li><img src="images/1.jpg" alt=""></li>
+		    <li><img src="images/2.jpg" alt=""></li>
+		    <li><img src="images/3.jpg" alt=""></li>
+		    <li><img src="images/4.jpg" alt=""></li>
+		</ul>
+	</body>
+</html>

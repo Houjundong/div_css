@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>旋转中心点-旋转轴向</title>
+		<style type="text/css">
+			body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{
+			    margin:0;padding:0
+			}
+			ul{
+				width: 800px;
+				height: 500px;
+				border: 1px solid #CCCCCC;
+				
+			}
+			ul li{
+				list-style: none;
+				width: 200px;
+				height: 200px;
+				margin: 50px auto;
+				perspective: 500px;
+				border: 1px solid #ccc;
+				
+			}
+			ul li img{
+			    width: 200px;
+			    height: 200px;
+				
+			}
+			ul li:nth-child(1) img{
+				transform: rotateZ(45deg);
+			}
+			ul li:nth-child(2) img{
+				transform: rotateX(45deg);
+			}
+			ul li:nth-child(3) img{
+				transform: rotateY(45deg);
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 
+		默认情况下所有元素都是围绕Z轴进行旋转	
+			想围绕哪个轴旋转, 那么只需要在rotate后面加上哪个轴即可
+			
+			1.什么是透视
+			近大远小
+			2.注意点
+			一定要注意, 透视属性必须添加到需要呈现近大远小效果的元素的父元素上面
+		 -->
+		<ul>
+		    <li><img src="images/rotateZ.jpg" alt=""></li>
+		    <li><img src="images/rotateX.jpg" alt=""></li>
+		    <li><img src="images/rotateY.jpg" alt=""></li>
+		</ul>
+	</body>
+</html>

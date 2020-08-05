@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>定位流（绝对定位， 相对定位， 固定定位， 静态定位）1.相对定位</title>
+		<!--相对定位流不会脱离标准流的，在标准流中会继续占一份空间 -->
+		<!-- 相对定位流:相对于自己在标准流中的位置来移动 -->
+		<style type="text/css">
+			body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{
+			    margin:0;padding:0
+			}
+			div{
+				width: 100px;
+				height: 100px;
+			}
+			.box1{
+				background-color: red;
+			}
+			.box2{
+				background-color: green;
+				position: relative;
+				top: 20px;
+				left: 20px;
+			}
+			.box3{
+				background-color: blue;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+	</body>
+</html>

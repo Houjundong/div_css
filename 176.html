@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>101-动画模块-其它属性上</title>
+		<style type="text/css">
+			body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{
+			    margin:0;padding:0
+			}
+			div{
+				width: 100px;
+				height: 50px;
+				background-color: red;
+				/* transition: margin-left 2s; */
+				animation-name: sport;
+				animation-duration: 2s;
+				 /*告诉系统多少秒之后开始执行动画*/
+				/* animation-delay: 2s; */
+				/*告诉系统动画执行的速度*/
+				/* animation-timing-function: ease-in-out; */
+				/*告诉系统动画需要执行几次*/
+				animation-iteration-count: 3;
+				/*告诉系统是否需要执行往返动画*/
+				/* animation-direction: noramal; */
+				animation-direction: alternate;
+			}
+			/* div:hover{
+				margin-left: 300px;
+			} */
+			 /*1.告诉系统需要执行哪个动画*/
+			 
+			 /*2.告诉系统我们需要自己创建一个名称叫做lnj的动画*/
+			 /*3.告诉系统动画持续的时长*/
+			 @keyframes sport{
+			 	from{
+					margin-left: 0;
+				}
+			 	to{
+					margin-left: 300px;
+				}
+			 }
+			 
+			 /*
+			             告诉系统当前动画是否需要暂停
+			             取值:
+			             running: 执行动画
+			             paused: 暂停动画
+			             */
+			div:hover{
+				animation-play-state: paused;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+		1.过渡和动画之间的异同
+		1.1不同点
+		过渡必须人为的触发才会执行动画
+		动画不需要人为的触发就可以执行动画
+		
+		1.2相同点
+		过渡和动画都是用来给元素添加动画的
+		过渡和动画都是系统新增的一些属性
+		过渡和动画都需要满足三要素才会有动画效果
+		-->
+		<div id=""></div>
+	</body>
+</html>
